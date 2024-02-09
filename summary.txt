@@ -1,0 +1,35 @@
+Lattice data:
+Family  All    Types  Coatoms  Types  Irreducibles  Types  Axioms
+sg4     26424  1512   37       10     181           20     96
+sg4sa   23190  1352   31       9      385           29     360
+csg4    6482   421    14       4      408           32     192
+csg4sa  6182   404    14       4      428           33     1032
+gr4     6482   421    14       4      408           32     192
+gr4sa   6482   421    14       4      408           32     192
+cgr4    2084   157    6        1      470           30     288
+cgr4sa  2084   157    6        1      470           30     288
+st4     22108  1285   37       10     37            10     552
+st4sa   20968  1224   31       9      85            13     720
+
+Coatoms of st(5) which are sg^\sa(5):
+Coatoms  Types  sg^\sa(5)  Types
+117978   1319   7328       154
+
+Second-order selfadhesion of sg(4):
+pr(4)  sg^\sa\sa(4)  sg^\sa(4)  sg(4)
+18478  18732         23190      26424
+
+Dual types not contained in family:
+Family  Types  Non-dual
+sg4     1512   0
+sg4sa   1352   48
+csg4    421    264
+csg4sa  404    247
+gr4     421    264
+gr4sa   421    264
+cgr4    157    0
+cgr4sa  157    0
+st4     1285   0
+st4sa   1224   30
+pr4     1098   5
+

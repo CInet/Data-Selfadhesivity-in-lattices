@@ -1,0 +1,27 @@
+FROM cinet/all
+# Always use bash and /etc/profile to get paths right
+SHELL ["/bin/bash", "-l", "-c"]
+# Install normaliz and untar code.
+RUN pacman -Sy --noconfirm normaliz time
+COPY selfadhe.tar.gz .
+RUN tar -zxf selfadhe.tar.gz
+WORKDIR selfadhe
+# First compute all `all`, `cnf`, `coatoms`, `irreds` files with lattice data.
+RUN ./run_timed.sh ./compute-lattice.sh sg4    2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh csg4   2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh gr4    2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh cgr4   2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh st4    2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh sg4sa  2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh csg4sa 2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh gr4sa  2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh cgr4sa 2>>timing.log
+RUN ./run_timed.sh ./compute-lattice.sh st4sa  2>>timing.log
+# Compute coatoms of st(5) and their intersection with sg^\sa(4).
+RUN ./run_timed.sh ./compute-st5-sg5sa.sh 2>>timing.log
+# Compute the second-order selfadhesion of sg(4).
+RUN ./run_timed.sh ./compute-sg4sasa.sh 2>>timing.log
+# Produce a summary and tar everything up.
+RUN ./run_timed.sh ./summarize.sh >summary.txt 2>>timing.log
+WORKDIR ..
+RUN tar -zcf selfadhe-result.tar.gz selfadhe

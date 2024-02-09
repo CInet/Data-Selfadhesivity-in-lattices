@@ -1,0 +1,13 @@
+./compute-lattice.sh sg4: user=51.41 system=17.41 real=0:58.58 cpu=117% maxres=61952K
+./compute-lattice.sh csg4: user=23.07 system=5.90 real=0:24.60 cpu=117% maxres=40868K
+./compute-lattice.sh gr4: user=23.18 system=5.99 real=0:24.75 cpu=117% maxres=40348K
+./compute-lattice.sh cgr4: user=11.66 system=2.54 real=0:12.08 cpu=117% maxres=40624K
+./compute-lattice.sh st4: user=154.99 system=35.77 real=2:40.11 cpu=119% maxres=59520K
+./compute-lattice.sh sg4sa: user=168.78 system=27.60 real=2:54.06 cpu=112% maxres=59392K
+./compute-lattice.sh csg4sa: user=104.63 system=16.48 real=1:45.08 cpu=115% maxres=60892K
+./compute-lattice.sh gr4sa: user=49.38 system=5.90 real=0:50.94 cpu=108% maxres=60400K
+./compute-lattice.sh cgr4sa: user=31.09 system=2.60 real=0:31.63 cpu=106% maxres=70096K
+./compute-lattice.sh st4sa: user=320.90 system=81.29 real=6:08.33 cpu=109% maxres=56448K
+./compute-st5-sg5sa.sh: user=617.13 system=1.51 real=7:00.64 cpu=147% maxres=595648K
+./compute-sg4sasa.sh: user=22246.76 system=0.48 real=6:11:17 cpu=99% maxres=157736K
+./summarize.sh: user=14.46 system=0.30 real=0:14.65 cpu=100% maxres=79488K
