@@ -123,7 +123,8 @@ the coatoms and irreducible elements using their definitions:
   equal to $\mathcal{M}$ is if there exists some $b^* \not\in \mathcal{M}$
   such that the $\mathfrak{f}$-closure of every set $\mathcal{M} \cup b$,
   for any $b \in \mathcal{K}(N) \setminus \mathcal{M}$, contains $b^*$.
-  This can be tested as well using multiple SAT solver invocations.
+  This can be tested as well using multiple SAT solver invocations, one for
+  each candidate $b^*$.
 
 The two programs [`coatoms.pl`](coatoms.pl) and [`irred.pl`](irred.pl)
 implement these algorithms.
