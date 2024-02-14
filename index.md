@@ -24,7 +24,7 @@ $ podman run -w /selfadhe -it cinet/selfadhe bash -l
 A summary table of numerical data for all computations is available in the
 [`summary.txt`](summary.txt) file. Timings for all computations performed
 in the above container on the author's laptop (single-thread performance,
-Thinkpad T14 with Intel i5-10310U) can be found in [`timing.log`](timing.log).
+Thinkpad T14 with Intel i7-1365U) can be found in [`timing.log`](timing.log).
 
 $\newcommand{\sg}{\mathfrak{sg}}$
 $\newcommand{\gr}{\mathfrak{gr}}$
