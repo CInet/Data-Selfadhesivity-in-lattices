@@ -218,20 +218,20 @@ Finished! 254 models passed.
 The program is long and uses a number of tricks, so some remarks are in
 order:
 
-- The computation is organized into the sequence of "tests" for the model
+- The computation is organized into a sequence of "tests" for the model
   $\mathcal{M} \in \sg^\sa(4)$ under consideration. There is one test for
-  each $L \subseteq N = \{1,2,3,4\}$ of size $|L| \in \{2,3\}$. The test
+  each $L \subseteq N = \\{1,2,3,4\\}$ of size $|L| \in \\{2,3\\}$. The test
   consists of computing $\sg^{\sa\sa}(\mathcal{M}|L)$ and making sure that
   it is not a strict superset of $\mathcal{M}$. All of these tests must
   pass before we can conclude $\mathcal{M} \in \sg^{\sa\sa}(4)$.
 
 - Instead of performing tests at a given set $L$ verbatim, we compute an
-  involution of $N$ which transfers $L$ to an initial segment $A = \{1, \dots, |L|\}$
-  of $N$. Applying the same involution, say $\sigma_L$ to the CI model under
-  consideration, say $\mathcal{M}$, we can then execute the test of
-  $\mathcal{M}$ at $L$ by equivalently testing $\sigma_L(\mathcal{M})$ at $A$.
-  This has two advantages: (1) We can detect symmetries of $\mathcal{M}$ and
-  skip computations that were already done; and (2) the boolean formulas for
+  involution of $N$ which transfers $L$ to an initial segment $A = \\{1, \dots, |L|\\}$
+  of $N$. Applying the same involution, say $\sigma_L$ to $\mathcal{M}$, we
+  can then execute the test of $\mathcal{M}$ at $L$ by equivalently testing
+  $\sigma_L(\mathcal{M})$ at $A$.
+  This has two advantages: (1) We can detect permutational symmetries of
+  $\mathcal{M}$ and skip redundant computations; and (2) the boolean formulas for
   adhesive extensions given initial segments can be cached and reused instead
   of being computed for every $L$. In general, we cache and reuse as much as
   possible. This saves time **and** memory compared to the naïve implementation.
