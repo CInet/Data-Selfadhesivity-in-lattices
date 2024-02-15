@@ -59,10 +59,13 @@ $ perl mod.pl 4 sg4/all | wc -l # count permutational types
 1512
 ```
 
-Combining the switches `--composition` and `--intersection`, one can enumerate
-graphoids, compositional semigraphoids or compositional graphoids. The switch
+The resulting file contains one CI model per line encoded in binary.
+The encoding follows earlier conventions and is explained on <https://gaussoids.de>.
+
+Combining the options `--composition` and `--intersection`, one can enumerate
+graphoids, compositional semigraphoids or compositional graphoids. The option
 `--structural` allows to enumerate structural semigraphoids. Finally, the
-option `--selfadhesive` can be combined with any of the previous switches to
+option `--selfadhesive` can be combined with any of the previous options to
 produce the selfadhesion of the indicated family. Note that `--selfadhesive`
 *cannot* be used multiple times to compute iterated selfadhesion.
 
@@ -72,7 +75,7 @@ was generated using [`simecek-tools`](https://github.com/taboege/simecek-tools)
 from files originally produced by Petr Šimeček [[Šim06]](#Šim06). This website
 disappeared but the data is still available from the [Internet Archive](http://web.archive.org/web/20190516145904/http://atrey.karlin.mff.cuni.cz/~simecek/skola/models/).
 
-### Pseudo-closed elements and axioms
+### Pseudo-closed models and axioms
 
 The program [`axioms.pl`](axioms.pl) takes a list of models in a CI family
 as input, assuming that they form a lattice, and executes the algorithm
@@ -87,7 +90,11 @@ $ perl axioms.pl 4 sg4/all >sg4/cnf
 12|3 & 14|23 => 12|34 & 14|3
 ```
 
-The pseudo-closed elements of the lattice which give rise to these axioms
+The output file is a boolean formula axiomatizing the input family in the
+standard DIMACS CNF format which is understood by all varieties of SAT
+solvers.
+
+The pseudo-closed models of the lattice which give rise to these axioms
 can also be printed:
 
 ``` console
@@ -99,7 +106,7 @@ $ perl axioms.pl --pseudo-closed 4 sg4/all | perl mod.pl 4 | perl write-struct.p
 ### Coatoms and irreducibles
 
 Given the axioms of a family of CI models in CNF, it is easy to enumerate
-the coatoms and irreducible elements using their definitions:
+the coatoms and irreducible models using their definitions:
 
 - A CI model $\mathcal{M}$ is a *coatom* in $\mathfrak{f}(N)$ if the only
   strict superset in $\mathfrak{f}(N)$ is the full CI model $\mathcal{K}(N)$.
@@ -227,10 +234,10 @@ order:
   pass before we can conclude $\mathcal{M} \in \sg^{\sa\sa}(4)$.
 
 - Instead of performing tests at a given set $L$ verbatim, we compute an
-  involution of $N$ which transfers $L$ to an initial segment $A = \\{1, \dots, |L|\\}$
-  of $N$. Applying the same involution, say $\sigma_L$ to $\mathcal{M}$, we
-  can then execute the test of $\mathcal{M}$ at $L$ by equivalently testing
-  $\sigma_L(\mathcal{M})$ at $A$.
+  involution $\sigma_L$ (i.e., a self-inverse permutation) of $N$ which
+  transfers $L$ to an initial segment $A = \\{1, \dots, |L|\\}$ of $N$.
+  Using $\sigma_L$, we can then perform the test of $\mathcal{M}$ at $L$
+  by equivalently testing $\sigma_L(\mathcal{M})$ at $A$.
   This has two advantages: (1) We can detect permutational symmetries of
   $\mathcal{M}$ and skip redundant computations; and (2) the boolean formulas for
   adhesive extensions given initial segments can be cached and reused instead
