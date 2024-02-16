@@ -8,9 +8,9 @@ done
 column -t table.in && rm table.in
 echo
 
-echo "Coatoms of st(5) which are sg^\\sa(5):"
-echo "Coatoms Types sg^\\sa(5) Types" >>table.in
-echo $(cat st5/coatoms | wc -l) $(perl mod.pl 5 st5/coatoms | wc -l) $(cat st5/coatoms-sg5sa | wc -l) $(perl mod.pl 5 st5/coatoms-sg5sa | wc -l) >>table.in
+echo "Coatoms of st(5) which are sg^\\sa(5) or st^\\sa(5):"
+echo "Coatoms Types sg^\\sa(5) Types st^\\sa(5) Types" >>table.in
+echo $(cat st5/coatoms | wc -l) $(perl mod.pl 5 st5/coatoms | wc -l) $(cat st5/coatoms-sg5sa | wc -l) $(perl mod.pl 5 st5/coatoms-sg5sa | wc -l) $(cat st5/coatoms-st5sa | wc -l) $(perl mod.pl 5 st5/coatoms-st5sa | wc -l) >>table.in
 column -t table.in && rm table.in
 echo
 

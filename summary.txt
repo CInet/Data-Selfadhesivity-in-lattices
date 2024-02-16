@@ -11,9 +11,9 @@ cgr4sa  2084   157    6        1      470           30     288
 st4     22108  1285   37       10     37            10     552
 st4sa   20968  1224   31       9      85            13     720
 
-Coatoms of st(5) which are sg^\sa(5):
-Coatoms  Types  sg^\sa(5)  Types
-117978   1319   7328       154
+Coatoms of st(5) which are sg^\sa(5) or st^\sa(5):
+Coatoms  Types  sg^\sa(5)  Types  st^\sa(5)  Types
+117978   1319   7328       154    7328       154
 
 Second-order selfadhesion of sg(4):
 pr(4)  sg^\sa\sa(4)  sg^\sa(4)  sg(4)

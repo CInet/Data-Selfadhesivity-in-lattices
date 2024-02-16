@@ -1,13 +1,13 @@
-./compute-lattice.sh sg4: user=51.41 system=17.41 real=0:58.58 cpu=117% maxres=61952K
-./compute-lattice.sh csg4: user=23.07 system=5.90 real=0:24.60 cpu=117% maxres=40868K
-./compute-lattice.sh gr4: user=23.18 system=5.99 real=0:24.75 cpu=117% maxres=40348K
-./compute-lattice.sh cgr4: user=11.66 system=2.54 real=0:12.08 cpu=117% maxres=40624K
-./compute-lattice.sh st4: user=154.99 system=35.77 real=2:40.11 cpu=119% maxres=59520K
-./compute-lattice.sh sg4sa: user=168.78 system=27.60 real=2:54.06 cpu=112% maxres=59392K
-./compute-lattice.sh csg4sa: user=104.63 system=16.48 real=1:45.08 cpu=115% maxres=60892K
-./compute-lattice.sh gr4sa: user=49.38 system=5.90 real=0:50.94 cpu=108% maxres=60400K
-./compute-lattice.sh cgr4sa: user=31.09 system=2.60 real=0:31.63 cpu=106% maxres=70096K
-./compute-lattice.sh st4sa: user=320.90 system=81.29 real=6:08.33 cpu=109% maxres=56448K
-./compute-st5-sg5sa.sh: user=617.13 system=1.51 real=7:00.64 cpu=147% maxres=595648K
-./compute-sg4sasa.sh: user=22246.76 system=0.48 real=6:11:17 cpu=99% maxres=157736K
-./summarize.sh: user=14.46 system=0.30 real=0:14.65 cpu=100% maxres=79488K
+./compute-lattice.sh sg4: user=96.66 system=29.30 real=1:43.51 cpu=121% maxres=61952K
+./compute-lattice.sh csg4: user=40.23 system=9.79 real=0:41.19 cpu=121% maxres=40524K
+./compute-lattice.sh gr4: user=42.07 system=10.06 real=0:43.87 cpu=118% maxres=40228K
+./compute-lattice.sh cgr4: user=18.79 system=3.77 real=0:18.85 cpu=119% maxres=40296K
+./compute-lattice.sh st4: user=249.78 system=57.47 real=4:16.07 cpu=119% maxres=59520K
+./compute-lattice.sh sg4sa: user=260.15 system=45.48 real=4:26.32 cpu=114% maxres=59392K
+./compute-lattice.sh csg4sa: user=167.51 system=28.01 real=2:47.55 cpu=116% maxres=60364K
+./compute-lattice.sh gr4sa: user=74.10 system=9.02 real=1:15.32 cpu=110% maxres=60364K
+./compute-lattice.sh cgr4sa: user=45.94 system=3.92 real=0:46.17 cpu=108% maxres=70080K
+./compute-lattice.sh st4sa: user=480.76 system=127.27 real=9:06.71 cpu=111% maxres=56192K
+./compute-st5-sg5sa.sh: user=1201.01 system=77.28 real=17:32.20 cpu=121% maxres=595880K
+./compute-sg4sasa.sh: user=28618.86 system=0.91 real=7:57:50 cpu=99% maxres=158140K
+./summarize.sh: user=14.69 system=0.34 real=0:14.92 cpu=100% maxres=79232K
