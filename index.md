@@ -190,13 +190,17 @@ This shows that out of all 1319 permutational types of extreme normalized
 supermodular functions, at most 154 can be entropic due to conditional
 independence obstructions.
 
+A similar computation using `perl test.pl 5 --structural --selfadhesive`
+instead shows that the coatoms of $\st(5)$ which are in $\sg^\sa(5)$
+coincide with those in $\st^\sa(5)$.
+
 ## Computing the second-order selfadhesive semigraphoids
 
 The last major computation in the paper is the determination of $\sg^{\sa\sa}(4)$.
 This is accomplished by a dedicated script [`sasa.pl`](sg4sasa/sasa.pl).
 The implementation differs from the algorithm presented in Appendix C of the
 paper in technical details which are intended to reduce computation time.
-Still, with over 6 hours of computation time, this is by far the
+Still, with almost 8 hours of computation time, this is by far the
 longest-running task.
 
 First note that since $\sg^{\sa\sa}(4)$ is a superset of $\pr(4)$, we only
@@ -216,10 +220,10 @@ of second-order selfadhesivity:
 $ perl sasa.pl sg4sa-minus-pr4 >/dev/null
 The sg4sa/all file name is not as expected. at sg4sasa/sasa.pl line 51.
 Reducing selfadhesive semigraphoids modulo symmetry... 254
-[Thu Feb  8 05:55:53 2024] 000011111111111111110001 [AB: 1] [AC: 2] [AD: 2] [BC: 2] [BD: 2] [CD: 2] [ABC: 1] [ABD: 0] [ACD: 2] [BCD: 2] PASS
-[Thu Feb  8 05:57:22 2024] 000011111111111111110010 [AB: 2] [AC: 2] [AD: 2] [BC: 2] [BD: 2] [CD: 2] [ABC: 2] [ABD: 0] [ACD: 2] [BCD: 2] PASS
+[Thu Feb 15 19:44:11 2024] 000011111111111111110001 [AB: 1] [AC: 2] [AD: 2] [BC: 2] [BD: 2] [CD: 2] [ABC: 1] [ABD: 0] [ACD: 2] [BCD: 2] PASS
+[Thu Feb 15 19:46:17 2024] 000011111111111111110010 [AB: 2] [AC: 2] [AD: 2] [BC: 2] [BD: 2] [CD: 2] [ABC: 2] [ABD: 0] [ACD: 2] [BCD: 2] PASS
 …
-[Thu Feb  8 12:05:34 2024] 101111011111111111011110 [AB: 2] [AC: 2] [AD: 2] [BC: 2] [BD: 2] [CD: 2] [ABC: 2] [ABD: 2] [ACD: 1] [BCD: 1] PASS
+[Fri Feb 16 03:40:25 2024] 101111011111111111011110 [AB: 2] [AC: 2] [AD: 2] [BC: 2] [BD: 2] [CD: 2] [ABC: 2] [ABD: 2] [ACD: 1] [BCD: 1] PASS
 Finished! 254 models passed.
 ```
 
