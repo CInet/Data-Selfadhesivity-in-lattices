@@ -213,7 +213,7 @@ normalized supermodular functions on $|N|=5$ (or, equivalently, tight
 5-polymatroids) can be excluded from being entropic by using probabilistically
 valid CI implications derived from known conditional Ingleton inequalities
 on $|N|=4$. This computation is performed using `Mathematica` and documented
-in its source file [`doc-sec-6-remark-2B.nb`](mathematica/doc-sec-6-remark-2B.nb).
+in its source file [`doc-sec-6-remark-2.nb`](mathematica/doc-sec-6-remark-2.nb).
 
 ## Computing the second-order selfadhesive semigraphoids
 
