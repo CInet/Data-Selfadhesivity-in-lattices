@@ -198,7 +198,7 @@ coincide with those in $\st^\sa(5)$.
 
 The last major computation in the paper is the determination of $\sg^{\sa\sa}(4)$.
 This is accomplished by a dedicated script [`sasa.pl`](sg4sasa/sasa.pl).
-The implementation differs from the algorithm presented in Appendix C of the
+The implementation differs from the algorithm presented in Appendix D of the
 paper in technical details which are intended to reduce computation time.
 Still, with almost 8 hours of computation time, this is by far the
 longest-running task.
