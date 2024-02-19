@@ -78,7 +78,7 @@ disappeared but the data is still available from the [Internet Archive](http://w
 
 We have also implemented a function in `Mathematica` to independently test
 selfadhesivity of semigraphoids over a 4-element ground set at a 2-element
-subset. Refer to [doc-N4-xy.nb](mathematica/doc-N4-xy.nb) and its embedded
+subset. Refer to [`doc-N4-xy.nb`](mathematica/doc-N4-xy.nb) and its embedded
 documentation.
 
 ### Pseudo-closed models and axioms
@@ -199,8 +199,21 @@ independence obstructions.
 A similar computation using `perl test.pl 5 --structural --selfadhesive`
 instead shows that the coatoms of $\st(5)$ which are in $\sg^\sa(5)$
 coincide with those in $\st^\sa(5)$. This computation has been independently
-verified in `Mathematica` using [doc-N5-xy.nb](mathematica/doc-N5-xy.nb)
-and [doc-N5-xyz.nb](mathematica/doc-N5-xyz.nb).
+verified in `Mathematica` using [`doc-N5-xy.nb`](mathematica/doc-N5-xy.nb)
+and [`doc-N5-xyz.nb`](mathematica/doc-N5-xyz.nb). A list of permutational
+types of extreme rays of the polymatroid cone for $|N|=5$ is also available
+in [`doc-vectors-all.nb`](mathematica/doc-vectors-all.nb). The numbering of
+the extreme rays follows the ordering on the [Electronic catalogue of
+representatives of extreme supermodular set functions over five variables](http://www.utia.cas.cz/user_data/studeny/fivevar.htm).
+
+## Further reduction of possible entropic entreme rays of 5-polymatroids
+
+In Section 6 we mention that even more permutational types of extreme
+normalized supermodular functions on $|N|=5$ (or, equivalently, tight
+5-polymatroids) can be excluded from being entropic by using probabilistically
+valid CI implications derived from known conditional Ingleton inequalities
+on $|N|=4$. This computation is performed using `Mathematica` and documented
+in its source file [`doc-sec-6-remark-2B.nb`](mathematica/doc-sec-6-remark-2B.nb).
 
 ## Computing the second-order selfadhesive semigraphoids
 
