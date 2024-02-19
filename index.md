@@ -21,10 +21,11 @@ details on containers). Then login via
 $ podman run -w /selfadhe -it cinet/selfadhe bash -l
 ```
 
-A summary table of numerical data for all computations is available in the
-[`summary.txt`](summary.txt) file. Timings for all computations performed
-in the above container on the author's laptop (single-thread performance,
-Thinkpad T14 with Intel i7-1365U) can be found in [`timing.log`](timing.log).
+The summary table of numerical data for all computations is available (on
+which the table in Appendix C is based) in the [`summary.txt`](summary.txt)
+file. Timings for all computations performed in the above container on the
+author's laptop (single-thread performance, Thinkpad T14 with Intel i7-1365U)
+can be found in [`timing.log`](timing.log).
 
 $\newcommand{\sg}{\mathfrak{sg}}$
 $\newcommand{\gr}{\mathfrak{gr}}$
@@ -205,7 +206,7 @@ and [doc-N5-xyz.nb](mathematica/doc-N5-xyz.nb).
 
 The last major computation in the paper is the determination of $\sg^{\sa\sa}(4)$.
 This is accomplished by a dedicated script [`sasa.pl`](sg4sasa/sasa.pl).
-The implementation differs from the algorithm presented in Appendix D of the
+The implementation differs from the algorithm presented in Appendix B of the
 paper in technical details which are intended to reduce computation time.
 Still, with almost 8 hours of computation time, this is by far the
 longest-running task.
