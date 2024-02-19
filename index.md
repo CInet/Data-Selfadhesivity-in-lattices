@@ -75,6 +75,11 @@ was generated using [`simecek-tools`](https://github.com/taboege/simecek-tools)
 from files originally produced by Petr Šimeček [[Šim06]](#Šim06). This website
 disappeared but the data is still available from the [Internet Archive](http://web.archive.org/web/20190516145904/http://atrey.karlin.mff.cuni.cz/~simecek/skola/models/).
 
+We have also implemented a function in `Mathematica` to independently test
+selfadhesivity of semigraphoids over a 4-element ground set at a 2-element
+subset. Refer to [doc-N4-xy.nb](mathematica/doc-N4-xy.nb) and its embedded
+documentation.
+
 ### Pseudo-closed models and axioms
 
 The program [`axioms.pl`](axioms.pl) takes a list of models in a CI family
@@ -192,7 +197,9 @@ independence obstructions.
 
 A similar computation using `perl test.pl 5 --structural --selfadhesive`
 instead shows that the coatoms of $\st(5)$ which are in $\sg^\sa(5)$
-coincide with those in $\st^\sa(5)$.
+coincide with those in $\st^\sa(5)$. This computation has been independently
+verified in `Mathematica` using [doc-N5-xy.nb](mathematica/doc-N5-xy.nb)
+and [doc-N5-xyz.nb](mathematica/doc-N5-xyz.nb).
 
 ## Computing the second-order selfadhesive semigraphoids
 
