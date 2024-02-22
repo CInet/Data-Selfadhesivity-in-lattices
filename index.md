@@ -8,8 +8,8 @@ results presented in the paper:
 - arXiv preprint: [`cs.IT/XXX.YYY`](https://arxiv.org/abs/XXX.YYY)
 - Files directory: [`selfadhe-lattices`](./?dir) with container sources: [`selfadhe-lattices/container`](container?dir)
 - Container image:
-  [`selfadhe-lattices.tar.zst`](/images/cinet-selfadhe-v1.0.0-20240208.tar.zst)
-  <small style="line-break: anywhere">(SHA256: <code>29a0cd3f7ef7d018d7ff7a31fdea5dac1c8a4636a566e6e51c8aaa5cccae488f</code>)</small>
+  [`selfadhe-lattices.tar.zst`](/images/cinet-selfadhe-v1.0.0-20240215.tar.zst)
+  <small style="line-break: anywhere">(SHA256: <code>5392aa406934092400c66fd06ceb8cf35bf8174e246ecf95b201fd1aa061c302</code>)</small>
 - Repository: <code>git clone <https://git.cinet.link/selfadhe-lattices></code>
 
 Notation and terminology follows the paper. All computations are performed
