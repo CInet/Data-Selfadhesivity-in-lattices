@@ -5,7 +5,7 @@ results presented in the paper:
 
 > Tobias Boege, Janneke H. Bolt, Milan Studený: *Self-adhesivity in lattices of abstract conditional independence models*.
 
-- arXiv preprint: [`cs.IT/XXX.YYY`](https://arxiv.org/abs/XXX.YYY)
+- arXiv preprint: [`math.CO/2402.14053`](https://arxiv.org/abs/2402.14053)
 - Files directory: [`selfadhe-lattices`](./?dir) with container sources: [`selfadhe-lattices/container`](container?dir)
 - Container image:
   [`selfadhe-lattices.tar.zst`](/images/cinet-selfadhe-v1.0.0-20240215.tar.zst)
