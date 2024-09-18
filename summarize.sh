@@ -14,6 +14,11 @@ echo $(cat st5/coatoms | wc -l) $(perl mod.pl 5 st5/coatoms | wc -l) $(cat st5/c
 column -t table.in && rm table.in
 echo
 
+echo "Coatoms of lin(5):" $(cat linrays5/coatoms | wc -l) "types"
+echo "Coatoms of lin(5) in st^\\sa(5):" $(cat st5/coatoms-st5sa | perl mod.pl 5 | while read S; do grep -qe "$S" linrays5/coatoms && echo "$S"; done | wc -l) "types"
+echo "Undecided coatoms in st^\\sa(5):" $(cat linrays5/undecided | wc -l) "types"
+echo
+
 echo "Second-order selfadhesion of sg(4):"
 echo "pr(4) sg^\\sa\\sa(4) sg^\\sa(4) sg(4)" >>table.in
 echo $(cat pr4/all | wc -l) $(cat sg4sasa/all | wc -l) $(cat sg4sa/all | wc -l) $(cat sg4/all | wc -l) >>table.in

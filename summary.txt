@@ -15,6 +15,10 @@ Coatoms of st(5) which are sg^\sa(5) or st^\sa(5):
 Coatoms  Types  sg^\sa(5)  Types  st^\sa(5)  Types
 117978   1319   7328       154    7328       154
 
+Coatoms of lin(5): 162 types
+Coatoms of lin(5) in st^\sa(5): 138 types
+Undecided coatoms in st^\sa(5): 16 types
+
 Second-order selfadhesion of sg(4):
 pr(4)  sg^\sa\sa(4)  sg^\sa(4)  sg(4)
 18478  18732         23190      26424

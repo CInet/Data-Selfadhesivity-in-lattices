@@ -5,11 +5,11 @@ results presented in the paper:
 
 > Tobias Boege, Janneke H. Bolt, Milan Studený: *Self-adhesivity in lattices of abstract conditional independence models*.
 
-- arXiv preprint: [`math.CO/2402.14053`](https://arxiv.org/abs/2402.14053)
+- arXiv preprint: [`math.CO/2402.14053v2`](https://arxiv.org/abs/2402.14053v2)
 - Files directory: [`selfadhe-lattices`](./?dir) with container sources: [`selfadhe-lattices/container`](container?dir)
 - Container image:
-  [`selfadhe-lattices.tar.zst`](/images/cinet-selfadhe-v1.0.0-20240215.tar.zst)
-  <small style="line-break: anywhere">(SHA256: <code>5392aa406934092400c66fd06ceb8cf35bf8174e246ecf95b201fd1aa061c302</code>)</small>
+  [`selfadhe-lattices.tar.zst v1.1.0`](/images/cinet-selfadhe-v1.1.0-20240918.tar.zst)
+  <small style="line-break: anywhere">(SHA256: <code>22cfb98b2f7ffe1a8522929adff735f65eda0daed84a51ed1342662baaa6fea9</code>)</small>
 - Repository: <code>git clone <https://git.cinet.link/selfadhe-lattices></code>
 
 Notation and terminology follows the paper. All computations are performed
@@ -206,14 +206,46 @@ in [`doc-vectors-all.nb`](mathematica/doc-vectors-all.nb). The numbering of
 the extreme rays follows the ordering on the [Electronic catalogue of
 representatives of extreme supermodular set functions over five variables](http://www.utia.cas.cz/user_data/studeny/fivevar.htm).
 
+## Linear polymatroids and a lower bound on probabilistically representable coatoms
+
+The cone of linear polymatroids on $|N|=5$ has been completely characterized
+by Dougherty, Freiling and Zeger in [[DFZ10]](#DFZ10). In particular, they
+conveniently provide the extreme rays in machine-readable form at their
+[repository](http://code.ucsd.edu/zeger/linrank/) (which is also archived
+through the [Wayback machine](https://web.archive.org/web/20220710022027/http://code.ucsd.edu/zeger/linrank/)).
+We use the extreme rays listed in the file `checkrays5.m`, which also
+contains subspace arrangements proving the linearity of those rays.
+By results contained, for example, in [[Mat97]](#Mat97), those extreme
+rays are entropic.
+
+Using the same programs as in the previous section, we may compute their
+corresonding CI structures. The script `linrays5.pl` converts the ordering
+of subsets employed by Dougherty, Freiling and Zeger (the "binary counter"
+ordering) to our standard (cardinality-lexicographic) ordering of subsets:
+
+``` console
+$ perl linrays5/linrays5.pl | perl st5/to-relation.pl 5 | perl mod.pl 5 >linrays5/coatoms
+```
+
+These CI models can then be removed from the coatoms of $\st^\sa(5)$ to
+yield a set of 16 CI models (or extreme rays of the polymatroid cone)
+for which we cannot tell whether they are entropic, almost-entropic or
+neither.
+
+``` console
+$ cat st5/coatoms-st5sa | perl mod.pl 5 | while read S
+> do grep -qe "$S" linrays5/coatoms || echo "$S"
+> done >linrays5/undecided
+```
+
 ## Further reduction of possible entropic entreme rays of 5-polymatroids
 
-In Section 6 we mention that even more permutational types of extreme
+In Section 8 we mention that even more permutational types of extreme
 normalized supermodular functions on $|N|=5$ (or, equivalently, tight
 5-polymatroids) can be excluded from being entropic by using probabilistically
 valid CI implications derived from known conditional Ingleton inequalities
 on $|N|=4$. This computation is performed using `Mathematica` and documented
-in its source file [`doc-sec-6-remark-2.nb`](mathematica/doc-sec-6-remark-2.nb).
+in its source file [`doc-ingleton.nb`](mathematica/doc-ingleton.nb).
 
 ## Computing the second-order selfadhesive semigraphoids
 
@@ -221,7 +253,7 @@ The last major computation in the paper is the determination of $\sg^{\sa\sa}(4)
 This is accomplished by a dedicated script [`sasa.pl`](sg4sasa/sasa.pl).
 The implementation differs from the algorithm presented in Appendix B of the
 paper in technical details which are intended to reduce computation time.
-Still, with almost 8 hours of computation time, this is by far the
+Still, with almost 6 hours of computation time, this is by far the
 longest-running task.
 
 First note that since $\sg^{\sa\sa}(4)$ is a superset of $\pr(4)$, we only
@@ -281,23 +313,28 @@ order:
 ## References
 
 <dl class="references">
+<dt><a name="DFZ10">[DFZ10]</a></dt>
+<dd>
+R. Dougherty, C. Freiling and K. Zeger: Linear rank inequalities on five or more variables.
+<a href="https://arxiv.org/abs/0910.0284v3"><code>arXiv:0910.0284v3</code></a> (2010).
+</dd>
 <dt><a name="Mat97">[Mat97]</a></dt>
 <dd>
 F. Matúš: Conditional independence structures examined via minors. Ann. Math. Artif. Intell. 21 (1997).
-</dd>
-<dt><a name="Stu94">[Stu94]</a></dt>
-<dd>
-M. Studený: Structural semigraphoids. Int. J. Gen. Syst. 22(2) (1994).
 </dd>
 <dt><a name="Šim06">[Šim06]</a></dt>
 <dd>
 P. Šimeček: A short note on discrete representability of independence models. PGM workshop, Prague (2006).
 </dd>
+<dt><a name="Stu94">[Stu94]</a></dt>
+<dd>
+M. Studený: Structural semigraphoids. Int. J. Gen. Syst. 22(2) (1994).
+</dd>
 </dl>
 
 # Colophon
 
-- This document describes version `v1.0.0` of the data.
+- This document describes version `v1.1.0` of the data.
 - Author: Tobias Boege `post@taboege.de`.
-- Last modified: 12 February 2024.
+- Last modified: 19 September 2024.
 - License: <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>

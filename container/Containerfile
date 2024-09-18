@@ -19,6 +19,8 @@ RUN ./run_timed.sh ./compute-lattice.sh cgr4sa 2>>timing.log
 RUN ./run_timed.sh ./compute-lattice.sh st4sa  2>>timing.log
 # Compute coatoms of st(5) and their intersection with sg^\sa(5).
 RUN ./run_timed.sh ./compute-st5-sg5sa.sh 2>>timing.log
+# Compute the extreme rays of the linear polymatroid cone (according to DFZ10).
+RUN ./run_timed.sh ./compute-linrays5.sh 2>>timing.log
 # Compute the second-order selfadhesion of sg(4).
 RUN ./run_timed.sh ./compute-sg4sasa.sh 2>>timing.log
 # Produce a summary and tar everything up.
